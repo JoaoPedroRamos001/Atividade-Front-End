@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Móveis Antigos</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Móveis Antigos</h1>
+    </header>
+
+    <section class="benefits-section">
+      <h2>Conheça nossos benefícios:</h2>
+      <p>Cartão Ouro com 15% de desconto nas compras à vista no débito.</p>
+      <p>Cartão Prata com 10% de desconto nas compras à vista no débito.</p>
+      <p>Cartão Bronze com 5% de desconto nas compras à vista no débito.</p>
+    </section>
+
+    <section class="benefits-section">
+      <h2>Conheça nossos benefícios:</h2>
+      <select id="cardSelect" onchange="applyDiscount()">
+        <option value="none">Escolha seu cartão</option>
+        <option value="gold">Cartão Ouro</option>
+        <option value="silver">Cartão Prata</option>
+        <option value="bronze">Cartão Bronze</option>
+      </select>
+    </section>
+
+    <main>
+      <div class="product-card" onclick="showModal(1000, 'Piano')">
+        <img class="product-image" src="imagens/piano.jpg" alt="Piano" />
+        <h3>Piano</h3>
+        <p>R$ 1000,00</p>
+      </div>
+
+      <div class="product-card" onclick="showModal(1500, 'Mesa de Jantar')">
+        <img
+          class="product-image"
+          src="imagens/mesadejantar.jpg"
+          alt="Mesa de Jantar"
+        />
+        <h3>Mesa de Jantar</h3>
+        <p>R$ 1500,00</p>
+      </div>
+
+      <div class="product-card" onclick="showModal(200, 'Jarro de Flores')">
+        <img
+          class="product-image"
+          src="imagens/jarrodeflores.jpg"
+          alt="Jarro de Flores"
+        />
+        <h3>Jarro de Flores</h3>
+        <p>R$ 200,00</p>
+      </div>
+
+      <div class="product-card" onclick="showModal(250, 'Mesa de Escritório')">
+        <img
+          class="product-image"
+          src="imagens/escritorio.jpg"
+          alt="Mesa de Escritório"
+        />
+        <h3>Mesa de Escritório</h3>
+        <p>R$ 250,00</p>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-section-inner">
+            <h3>Contato</h3>
+            <p>contato@seudominio.com</p>
+            <p>Telefone: (11) 1234-5678</p>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <div class="footer-section-inner">
+            <h3>Redes Sociais</h3>
+            <p>Facebook</p>
+            <p>Instagram</p>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <div class="footer-section-inner">
+            <h3>Endereço</h3>
+            <p>Rua da Loja, 123</p>
+            <p>Cidade, Estado</p>
+            <p>CEP: 12345-678</p>
+          </div>
+        </div>
+      </div>
+
+      <p>&copy; 2023 Portal de Vendas</p>
+    </footer>
+
+    <div class="modal" id="myModal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Desconto Promocional</h2>
+        <p id="discountMessage">Escolha um produto para ver o desconto.</p>
+        <select id="discountSelect">
+          <option value="0">Sem desconto</option>
+          <option value="5">Desconto de 5%</option>
+          <option value="10">Desconto de 10%</option>
+          <option value="15">Desconto de 15%</option>
+        </select>
+        <p id="finalPrice"></p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
